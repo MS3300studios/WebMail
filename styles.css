@@ -1,0 +1,141 @@
+main{
+    width: 100%;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr;    
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "compose compose" 
+    "nav nav"
+    "labels labels"
+    "email email"
+    "email email"
+    "email email"
+    "email email"
+    "email email"
+    "email email"
+    "email email"
+    "BigEmailHeadRigth BigEmailHeadLeft"
+    "BigEmailArticle BigEmailArticle"; */
+}
+#compose{
+    grid-area: compose;
+    display: flex;
+    justify-content: center;
+    background: #1B98F8;
+    border-radius: 20px;
+    margin: 16px auto;
+    margin-top: 15px;
+    padding: 10px 20px;
+    width: 60px;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    background: #252a3a;
+    margin-top: 0px;
+    height: 400px;
+}
+#navnumber2{
+    color: #647081;
+}
+header nav{
+    grid-area: nav;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 25px;
+}
+.labels{
+    grid-area: labels;
+    margin-top: 10px;
+    margin-left: 25px;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header h3{
+    color: #4e6e92;
+    font-weight: 500;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 15px;
+}
+section{
+    overflow-y: visible;
+}
+.email{
+    grid-area: email;
+    border-bottom: solid rgb(192, 182, 182) 1px;
+    display: flex;
+    justify-content: start;
+    font-size: 14px;
+}
+.email:hover{
+    background: #eeeeee;
+}
+.email #emailtxt{
+    margin-left: 7px;
+}
+.email img{
+    margin-top: 17px;
+    margin-left: 15px;
+    border-radius: 5px;
+}
+.sender{
+    font-family: 'Manrope', sans-serif;
+    color: grey;
+    margin-bottom: -18px;
+}
+.emailtopic{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    font-weight: bold;
+}
+.emailshort{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    margin-top: -10px;
+}
+footer a{
+    text-decoration: none;
+}
+footer{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.BigEmailDate{
+    color: gray;
+}
+footer .button{
+   padding: 6px 26px; 
+   color: black;
+   border: 1px solid gray;
+   border-radius: 20px;
+   width: 60px;
+   margin-bottom: 3px;
+   display: flex;
+   justify-content: center;
+}
+footer .button:hover{
+    background: #f1f1f1;
+}
+section img{
+    width: 40px;
+    height: 40px;
+}
+footer #BigEmailHead{
+    display: flex;
+    justify-content: space-around;
+    border-bottom: solid rgb(192, 182, 182) 1px;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+}
+footer #BigEmailHead #BigEmailHeadLeft{
+    margin-top: 20px;
+}
+footer #BigEmailHead #BigEmailHeadRight{
+    margin-left: 20px;
+}
+footer #BigEmailArticle{
+    display: flex;
+    justify-content: center;
+    width: 495px;
+    margin-left: 30px;
+}
