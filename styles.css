@@ -1,21 +1,21 @@
 main{
-    width: 100%;
-    /* display: grid;
-    grid-template-columns: 1fr 1fr;    
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr;    
     grid-template-rows: auto;
     grid-template-areas: 
-    "compose compose" 
-    "nav nav"
-    "labels labels"
-    "email email"
-    "email email"
-    "email email"
-    "email email"
-    "email email"
-    "email email"
-    "email email"
-    "BigEmailHeadRigth BigEmailHeadLeft"
-    "BigEmailArticle BigEmailArticle"; */
+    /* "compose" 
+    "nav"
+    "labels" */
+    "header"
+    "email"
+    "footer";
+    /* "BigEmailHead" 
+    "BigEmailArticle";  */
+}
+body{
+    margin: 0;
+    max-width: 639px;
 }
 #compose{
     grid-area: compose;
@@ -33,16 +33,42 @@ main{
 header{
     background: #252a3a;
     margin-top: 0px;
-    height: 400px;
+    padding-bottom: 20px;
+    grid-area: header;
+}
+header #menu{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #2089f5;
+    padding: 10px 9px 10px 555px
 }
 #navnumber2{
-    color: #647081;
+    color: #31578c;
 }
 header nav{
     grid-area: nav;
     color: #fff;
     font-family: Arial, Helvetica, sans-serif;
     margin-left: 25px;
+}
+.labels div{
+    padding-bottom: 10px;
+}
+.labels div::before{
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 2px;
+    border-radius: 2px;
+}
+.labels .labelelement1::before{
+    background: #ffc94c;
+}
+.labels .labelelement2::before{
+    background: #41ccb4;
+}
+.labels .labelelement3::before{
+    background: #40c365;
 }
 .labels{
     grid-area: labels;
@@ -59,10 +85,11 @@ header h3{
     margin-left: 15px;
 }
 section{
-    overflow-y: visible;
+    max-height: 600px;
+    overflow-y: auto;
+    grid-area: email;
 }
 .email{
-    grid-area: email;
     border-bottom: solid rgb(192, 182, 182) 1px;
     display: flex;
     justify-content: start;
@@ -99,6 +126,7 @@ footer a{
 }
 footer{
     font-family: Arial, Helvetica, sans-serif;
+    grid-area: footer;
 }
 .BigEmailDate{
     color: gray;
@@ -124,18 +152,87 @@ footer #BigEmailHead{
     display: flex;
     justify-content: space-around;
     border-bottom: solid rgb(192, 182, 182) 1px;
+    border-top: solid rgb(192, 182, 182) 1px;
     margin-bottom: 30px;
     padding-bottom: 30px;
-}
-footer #BigEmailHead #BigEmailHeadLeft{
     margin-top: 20px;
-}
-footer #BigEmailHead #BigEmailHeadRight{
-    margin-left: 20px;
 }
 footer #BigEmailArticle{
     display: flex;
     justify-content: center;
     width: 495px;
     margin-left: 30px;
+    margin-bottom: 35px;
+}
+footer #BigEmailLink{
+    color: #1b98f8;
+}
+footer #BigEmailHeadButtons{
+    margin-top: 20px;
+}
+
+
+@media(min-width: 1228px){
+    main{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 2fr 8fr;    
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "header email footer";       
+    }
+    header{
+        width: 200px;
+    }
+    header #menu{
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+    section{
+        width: 400px;        
+        max-height: 600px;
+        overflow-y: auto;              
+    }
+    footer{
+        width: 700px;
+    }
+    footer #BigEmailHead{
+        border-top: none;        
+    }
+    footer{
+        border-left: solid rgb(192, 182, 182) 1px;
+    }
+}
+@media(min-width: 960px){
+    main{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 2fr 8fr;    
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "header email footer";       
+    }
+    header{
+        width: 150px;
+    }
+    header #menu{
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+    section{
+        width: 310px;        
+        max-height: 600px;
+        overflow-y: auto;              
+    }
+    footer{
+        width: 500px;
+    }
+    footer #BigEmailHead{
+        border-top: none;        
+    }
+    footer{
+        border-left: solid rgb(192, 182, 182) 1px;
+    }
 }
