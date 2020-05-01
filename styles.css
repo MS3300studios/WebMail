@@ -1,5 +1,9 @@
 main{
-    width: auto;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
     display: grid;
     grid-template-columns: 1fr;    
     grid-template-rows: auto;
@@ -15,7 +19,6 @@ main{
 }
 body{
     margin: 0;
-    max-width: 639px;
 }
 #compose{
     grid-area: compose;
@@ -85,7 +88,7 @@ header h3{
     margin-left: 15px;
 }
 section{
-    max-height: 600px;
+    height: 600px;
     overflow-y: auto;
     grid-area: email;
 }
@@ -160,7 +163,7 @@ footer #BigEmailHead{
 footer #BigEmailArticle{
     display: flex;
     justify-content: center;
-    width: 495px;
+    padding-right: 20px;
     margin-left: 30px;
     margin-bottom: 35px;
 }
@@ -182,7 +185,8 @@ footer #BigEmailHeadButtons{
         "header email footer";       
     }
     header{
-        width: 200px;
+        /* width: 200px; */
+        width: auto;
     }
     header #menu{
         opacity: 0;
@@ -190,12 +194,15 @@ footer #BigEmailHeadButtons{
         display: none;
     }
     section{
-        width: 400px;        
+        /* width: 400px;         */
+        width: auto;
         max-height: 600px;
-        overflow-y: auto;              
+        overflow-y: auto;  
+        height: unset;             
     }
     footer{
-        width: 700px;
+        /* width: 700px; */
+        width: auto;
     }
     footer #BigEmailHead{
         border-top: none;        
@@ -223,11 +230,12 @@ footer #BigEmailHeadButtons{
     }
     section{
         width: 310px;        
-        max-height: 600px;
-        overflow-y: auto;              
+        max-height: 100%;
+        overflow-y: auto;   
+        height: unset;           
     }
     footer{
-        width: 500px;
+        /* width: 500px; */
     }
     footer #BigEmailHead{
         border-top: none;        
